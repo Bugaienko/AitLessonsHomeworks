@@ -9,6 +9,7 @@ public class Task03 {
         final int NUMBER = 1; //Объявление константы
 //        NUMBER = 2; Недопустимо
 
+
         double averageTemp = (double)( temp1 + temp2 + temp3) / 3;
         System.out.printf("Average temp %% ist: %.2f and %.3f", averageTemp, averageTemp);
         //Привет, "Маша"
