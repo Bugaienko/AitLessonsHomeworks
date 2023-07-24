@@ -1,6 +1,6 @@
 package lesson_05;
 
-public class lesson05 {
+public class Lesson05 {
     public static void main(String[] args) {
 
 //        Выравнивание кода Ctrl + Alt + L
