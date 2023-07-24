@@ -93,6 +93,7 @@ public class lesson05 {
 
         //логическое сокращенное ИЛИ
         boolean b10 = true || false;
+        boolean b102 = false || true;
         System.out.println("b10 " + b10);
 
         /*
