@@ -9,7 +9,7 @@ public class Task2 {
         System.out.println("Введите 4-х значное число: ");
         String numberInString = scanner.nextLine();
 
-        System.out.println(numberInString);
+//        System.out.println(numberInString);
 
     }
 }
