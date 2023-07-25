@@ -41,7 +41,10 @@ public class HW05 {
         System.out.println(true | false);
         System.out.println(true);
 
+
+
     }
+
 
     public static String checkNumber(int x) {
         boolean b1 = (x != 0) && (x % 2 == 0); // x = 1 -> (true) & (???)
@@ -51,6 +54,8 @@ public class HW05 {
 
         return resultString;
     }
+
+
     public static void checkNumberWithPrint(int x) {
         boolean b1 = (x != 0) && (x % 2 == 0); // x = 1 -> (true) & (???)
         boolean b2 = (x != 0) && x % 3 == 0; // x = 0 -> (false) & (???)
