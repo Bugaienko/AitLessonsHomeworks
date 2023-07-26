@@ -91,6 +91,13 @@ public class Task2 {
                 System.out.println(((int) '2')+ " -> 2");
                 System.out.println(((int) '3') + " -> 3");
 
+                System.out.println("++++++++++++++++++++");
+
+                System.out.println(((int) ch0 - 48) + " -> " + ch0);
+                System.out.println(((int) ch1 - 48)  + " -> " + ch1);
+                System.out.println(((int) ch2 - 48)+ " -> " + ch2);
+                System.out.println(((int) ch3 - 48) + " -> " + ch3);
+
                 if ((int)ch0 + ch1 == (int) ch2 + ch3) {
                     System.out.println("Число счастливое!");
                 } else {
