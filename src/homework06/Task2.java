@@ -77,7 +77,34 @@ public class Task2 {
                 }
 
             }
+
+            System.out.println("Variant 2: ==========");
+            if (numberInString.length() == 4) {
+                char ch0 = numberInString.charAt(0);
+                char ch1 = numberInString.charAt(1);
+                char ch2 = numberInString.charAt(2);
+                char ch3 = numberInString.charAt(3);
+
+                // 0..1 -> десятичный код
+                System.out.println(((int) '0') + " -> 0");
+                System.out.println(((int) '1')  + " -> 1");
+                System.out.println(((int) '2')+ " -> 2");
+                System.out.println(((int) '3') + " -> 3");
+
+                if ((int)ch0 + ch1 == (int) ch2 + ch3) {
+                    System.out.println("Число счастливое!");
+                } else {
+                    System.out.println("Число НЕ является счастливым");
+                }
+
+
+            } else {
+                System.out.println("Все пропало. Число не 4-х значное");
+            }
+
+
         }
+
 
 
     }
