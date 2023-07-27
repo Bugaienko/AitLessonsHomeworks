@@ -160,8 +160,6 @@ public class Lesson08 {
 
         System.out.println("Среднее арифметическое: " + (double)sum / countIterations );
 
-/*
 
- */
     }
 }
