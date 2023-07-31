@@ -72,10 +72,10 @@ public class HW09 {
         array[minIndex] = array[maxIndex];
         array[maxIndex] = temp; // temp = array[minIndex];
 
-        int max = array[maxIndex];
-        int min = array[minIndex];
-        array[maxIndex] = min;
-        array[minIndex] = max;
+//        int max = array[maxIndex];  //более подробная запись обмена значений в ячейках
+//        int min = array[minIndex];
+//        array[maxIndex] = min;
+//        array[minIndex] = max;
 
         System.out.println("after swap: " + Arrays.toString(array));
 

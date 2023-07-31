@@ -42,9 +42,9 @@ public class LoopFor {
 //        Вывести все числа от 10 до 0
         int y = 10;
         int i;
-        // код изменяющая i
+        // код изменяющий i
         i = 14;
-        for (int a = 0; i >= 0; i--, a++, j -= 2) {
+        for (int a = 0; i >= 0; i--, a++) { // в блоке изменения счетчиков, могут изменяться несколько переменных
             System.out.println(i + ":" + a);
         }
         System.out.println();
@@ -89,6 +89,7 @@ public class LoopFor {
 
        System.out.println(index);
         System.out.println();
+
         System.out.println("==================");
         // Распечатать 10 раз цифры от 0 до 4
 
