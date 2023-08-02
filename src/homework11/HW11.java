@@ -29,10 +29,27 @@ public class HW11 {
         класс Math для нахождения степени числа использовать нельзя ;)
          */
 
+        powMethod(-1);
+
 
     }
 
     //Methods area
+
+    // 2^ 3 -> 2 * 2 * 2 (3 раза)
+    // n ^ 0 -> 1
+    public static void powMethod(int x) {
+        if (x >= 0) {
+            int result = 1;
+            for (int i = 0; i < x; i++) {
+                result = result * 2;
+            }
+            System.out.println("2 в степени " + x + " равно: " + result);
+        } else {
+            System.out.println("Не верные аргументы вызова метода");
+        }
+    }
+
     public static void printReverseArray(int[] array, boolean flag) {
         if (flag) {
             // обратный порядок
