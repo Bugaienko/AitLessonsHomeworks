@@ -22,6 +22,13 @@ public class HW11 {
         printReverseArray(testArray, -3);
         printReverseArray(testArray, false);
 
+        /* Task 1
+        Написать метод, принимающий на вход целое число.
+        Метод должен вывести на экран 2 в степени этоЧисло
+
+        класс Math для нахождения степени числа использовать нельзя ;)
+         */
+
 
     }
 
