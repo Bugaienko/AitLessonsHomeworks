@@ -50,7 +50,7 @@ public class HW13 {
         int[] ints1 = copyOfArray(ints);
         System.out.println(Arrays.toString(ints1));
 
-        int[] ints2 = copyOfArray(ints, 11);
+        int[] ints2 = copyOfArray(ints, 3);
         System.out.println(Arrays.toString(ints2));
 
 
@@ -71,16 +71,19 @@ public class HW13 {
 
     public static int[] copyOfArray(int[] array) {
         if (array == null) return null;
-        int[] copyArray = new int[array.length];
-        for (int i = 0; i < array.length; i++) {
-            copyArray[i] = array[i];
-        }
-        return copyArray;
+
+        return copyOfArray(array, array.length);
+
+//        int[] copyArray = new int[array.length];
+//        for (int i = 0; i < array.length; i++) {
+//            copyArray[i] = array[i];
+//        }
+//        return copyArray;
     }
 
     public static int[] copyOfArray(int[] array, int newSize) {
         //Arrays.copyOf(array, idx
-        if (array == null) return null;
+        if (array == null || newSize <=0) return null;
 
         //{23, 23, 4, -20, 5, 98, 453}; l=7, copyOfArray(arr, 3)
         // {0, 0, 0}
@@ -92,7 +95,6 @@ public class HW13 {
         }
 
         return result;
-
     }
 
 
