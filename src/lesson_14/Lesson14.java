@@ -7,7 +7,7 @@ public class Lesson14 {
     public static void main(String[] args) {
         System.out.println("============= Task 0 ============");
 
-        // "Hello" -> "HELLO"
+               // "Hello" -> "HELLO"
 
 //        int[] rerf = new int[-100];
 //        System.out.println(Arrays.toString(rerf)); // Проверка предположения, что при попытке задать отрицательную
