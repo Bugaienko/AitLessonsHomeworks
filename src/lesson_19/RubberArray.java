@@ -1,17 +1,32 @@
-package lesson_18;
+package lesson_19;
 
 import java.util.Arrays;
 
 public class RubberArray {
 
-    int[] array;
+    private int[] array;
 
     public RubberArray() { // конструктор
         this.array = new int[0];
     }
 
-    public RubberArray(int[] arr) {
-        this(); // new RubberArray();
+//    public RubberArray(int[] arr) { // ПРОБЛЕМА! отдаем ссылку! значения в массиве класса могут быть изменены без нашего контроля(ведома)
+//        this.array = arr;
+//    }
+
+//    public RubberArray(int[] arr) { //VAR1.
+//        this.array = new int[arr.length];
+//        for (int i = 0; i < array.length; i++) {
+//            array[i] = arr[i];
+//        }
+//    }
+
+//    public RubberArray(int[] arr) { //VAR2
+//        this.array = Arrays.copyOf(arr, arr.length);
+//    }
+
+    public RubberArray(int[] arr) { //VAR3
+        this(); // this.array = new int[0];
         add(arr);
     }
 
@@ -28,7 +43,7 @@ public class RubberArray {
     }
 
 
-    public void extractArray() { // расширение массива на 1 ячейку
+    private void extractArray() { // расширение массива на 1 ячейку
         array = Arrays.copyOf(array, array.length + 1);
     }
 
@@ -109,24 +124,64 @@ public class RubberArray {
         }
     }
 
-    public int searchByValue(int value) { // поиск по значению. Возвращаем индекс
-
+    public int searchByValue(int value) { //Поиск элемента по значению. Возвращаем индекс
         for (int i = 0; i < array.length; i++) {
-            if (value == array[i]) return i;
+            if (array[i] == value) return i;
         }
-
         return -1;
     }
+
+    public boolean deleteByValue(int value) { // удаление по значению;
+        System.out.println("Start delete by value!");
+        int indexByValue = searchByValue(value);
+        if (indexByValue < 0) return false;
+        deleteByIndex(indexByValue);
+        return true;
+    }
+
+    public int deleteAllByValue(int value) { // Поиск и удаление ВСЕХ элементов по значению х;
+        int count = 0;
+
+        //Пытаемся найти значение в массиве. Если находим -> удаляем и возвращаем  true. Входим в тело while
+        //Если не находим, возвращается false. Выходим из цикла while
+        while (deleteByValue(value)) {
+            count++;
+        }
+
+        return count;
+    }
+
+    public int getValueByIndex(int index) { // Возврат значения по индексу в массиве
+        if (isIndexIncorrect(index)) {
+            return Integer.MIN_VALUE;
+        }
+        return array[index];
+    }
+
+    public boolean changeValueByIndex(int index, int newValue) {
+        if (isIndexIncorrect(index)) {
+            return false;
+        }
+        array[index] = newValue;
+        return true;
+    }
+
+    private boolean isIndexIncorrect(int index) {
+        return !(index >= 0 && index < array.length);
+    }
+
+
 
 
 }
 /*
-Поиск элемента по значению
-Возвращение значения по индексу
-Конструктор, принимающий в себя обычный массив и создающий RubberArray с такими де значениями
-Удаление элемента по значению
-Замена значения по индексу (есть индекс и новое значение)
-Замена значения по значению (есть старое и новое значение)
++ Поиск элемента по значению
++ Удаление элемента по значению
++ Удаление ВСЕХ элементов, имеющих значение X;
++ Возвращение значения по индексу
++ Конструктор, принимающий в себя обычный массив и создающий RubberArray с такими де значениями
+- Замена значения по индексу (есть индекс и новое значение)
+- Замена значения по значению (есть старое и новое значение)
  */
 
 

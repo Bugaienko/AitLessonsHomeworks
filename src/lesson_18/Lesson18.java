@@ -5,6 +5,8 @@ import java.util.Arrays;
 public class Lesson18 {
     public static void main(String[] args) {
 
+
+
 //        int[] array = new int[2];
 //        int var = 10;
 //        array[0] = var;
@@ -28,6 +30,7 @@ public class Lesson18 {
 
 
         ra.printArray();
+        System.out.println(ra.searchByValue(10));
         System.out.println("Min " + ra.min());
 
         ra.add(10);
@@ -41,7 +44,7 @@ public class Lesson18 {
 
         System.out.println("Сумма знаний элементов массива " + ra.sumOfValues());
 
-        ra.add(7, 14, -21);
+        ra.add(7, 14, -21, 15, 25);
 
         ra.printArray();
 
@@ -55,8 +58,18 @@ public class Lesson18 {
 
         ra.printArray();
 
-        ra.deleteByIndex(5);
+        ra.deleteByIndex(2);
         ra.printArray();
+
+        System.out.println();
+        System.out.println("==============");
+        RubberArray rubberArray = new RubberArray(newArray);
+        rubberArray.printArray();
+
+        System.out.println(rubberArray.searchByValue(-200));
+
+
+
 
 
     }
