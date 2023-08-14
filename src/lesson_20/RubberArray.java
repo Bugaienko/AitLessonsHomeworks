@@ -35,7 +35,7 @@ public class RubberArray {
 
 
     public void add(int value) { //добавление 1 элемента
-        if (isArrayFull()){
+        if (isArrayFull()) {
             extractArray();
         }
         array[cursor] = value;
@@ -50,7 +50,7 @@ public class RubberArray {
     }
 
     private boolean isArrayFull() {
-       return cursor == array.length -1;
+        return cursor == array.length - 1;
     }
 
 
@@ -138,22 +138,17 @@ public class RubberArray {
     }
 
 
-
+    //TODO
     public void deleteByIndex(int index) {
         if (cursor >= 1 && index >= 0 && index < cursor) {
 
 //            int[] result = new int[array.length - 1];
 
-            for (int i = 0; i < cursor; i++) {
-
-                if (i < index) {
-                    array[i] = array[i];
-                } else { // if (i >= index) {
-                    array[i] = array[i + 1];
-                }
+            for (int i = index; i < cursor; i++) {
+                array[i] = array[i + 1];
             }
 //            System.out.println("Result " + Arrays.toString(result));
-           cursor--;
+            cursor--;
         }
     }
 
