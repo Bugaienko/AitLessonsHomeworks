@@ -118,5 +118,34 @@ public class ArraysUtil {
 
     }
 
+    /*
+    https://it-cs.io/events/koeln/
+    Дописать метод для выведения массива в консоль.
+     */
+
+    public static void printArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + (i < array.length -1 ? ", " : ""));
+
+//            if (i < array.length -1) { //альтернатива тернарному оператору (добавления запятой после значения)
+//                System.out.print(", ");
+//            }
+        }
+        System.out.print("]\n");
+    }
+
+    public static String toString(int[] array) {
+        String result = "[";
+//        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+//            System.out.print(array[i] + (i < array.length -1 ? ", " : ""));
+            result += array[i] + (i < array.length -1 ? ", " : "]");
+        }
+//       result +="]\n";
+        return result;
+
+    }
+
 
 }

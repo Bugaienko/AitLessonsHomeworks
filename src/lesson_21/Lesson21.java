@@ -40,6 +40,11 @@ public class Lesson21 {
         idx = ArraysUtil.binarySearch(testArray, numberForSearch);
         System.out.println("Индекс числа " + numberForSearch + " = " + idx);
 
+        System.out.println();
+        System.out.println("====================");
+        System.out.println("Массив выглядит так: " + ArraysUtil.toString(ints));
+        ArraysUtil.printArray(ints);
+
 
     }
 }
