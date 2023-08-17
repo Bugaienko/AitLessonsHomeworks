@@ -47,7 +47,7 @@ public class BusDriver {
         //TODO
     }
 
-    public void removeCategory(String category) {
+    public void removeCategory(String category) { // str.equals(str1)
         //TODO
     }
 
