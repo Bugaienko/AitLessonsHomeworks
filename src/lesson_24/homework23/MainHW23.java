@@ -22,5 +22,16 @@ public class MainHW23 {
 //        driver.removeAllCategories();
         System.out.println(driver.toString());
 
+        System.out.println();
+        System.out.println("====================");
+        driver.addCategories("a");
+        driver.addCategories("v");
+        driver.addCategories("f");
+        driver.addCategories("sdf");
+        System.out.println(driver.toString());
+        driver.testArrayCopy(4);
+
+
+
     }
 }

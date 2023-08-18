@@ -57,6 +57,16 @@ public class BusDriver {
 
     }
 
+    public void  testArrayCopy(int idx) { // Вариант 2 для удаления по индексу
+        String[] strings = new String[categories.length -1];
+        if (idx < 0 || idx > categories.length -1) return;
+        System.arraycopy(categories, 0, strings, 0, idx);
+        System.arraycopy(categories, idx + 1, strings, idx,strings.length - idx);
+
+        System.out.println(Arrays.toString(strings));
+
+    }
+
     public boolean removeCategory(String category) { // str.equals(str1)
         // 1. Такая строка в массиве есть?
         // 2. Нам нужен ее индекс
