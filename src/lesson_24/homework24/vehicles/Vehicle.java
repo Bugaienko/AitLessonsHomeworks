@@ -10,6 +10,20 @@ package lesson_24.homework24.vehicles;
 Создайте массив транспортных средств разных типов. Используйте полиморфизм для вызова метода startEngine() для каждого транспортного средства.
  */
 
+/* --- OUTPUT
+Auto {id=0, title='VW Passat', engine=Engine{id=1, model='VW-001', power=200}}
+Engine id:1 starts
+
+Bicycle {id=1, title='Swallow'}
+What? Start engine? I haven't engine!
+
+Motorcycle {id=2, title='Honda pwt', engine=Engine{id=3, model='Hnd-500', power=150}}
+Engine id:3 starts
+
+Auto {id=3, title='Sedan x', engine=Engine{id=4, model='Eng-001', power=150}}
+Engine id:4 starts
+ */
+
 public class Vehicle {
 
     private final int id;
